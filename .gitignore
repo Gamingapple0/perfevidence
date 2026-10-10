@@ -1,0 +1,3 @@
+trees/
+__pycache__/
+*.parquet
