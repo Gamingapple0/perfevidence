@@ -26,6 +26,10 @@ GITHUB_TOKEN=... python scripts/fetch_bodies.py data/sample.csv data/sample_prs.
 
 Bench tiers: `adapter` = repo has a `bench`/`benchmark` npm script or vitest `*.bench.*` files (what the Action will run); `tree` = only bench-like files or folders. Both are upper bounds: detection runs on today's default branch, not the PR's base commit.
 
+## Claim extraction
+
+`src/claims.py` finds performance claims in a PR's title and description and parses the claimed gain ratio (`r_c`, e.g. 2.0 for "2x faster", 1.67 for "40% less memory"). Dimension detection is the deterministic extractor from the Purdue study, vendored unchanged in `src/metric_patterns.py` and `src/purdue_extract.py` (MIT, source commit in the file headers). Self-check: `cd src && python claims.py`.
+
 ## License
 
 MIT
