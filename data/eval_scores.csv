@@ -1,0 +1,101 @@
+repo,number,gold,pred,gold_r_c,pred_r_c,r_c_hit,quants
+Azure/azure-mcp,958,unquantified,unquantified,,,False,
+Azure/azure-sdk-tools,13031,unquantified,unquantified,,,False,
+AzureAD/microsoft-identity-web,3409,unquantified,unquantified,,,False,
+CapSoftware/Cap,1424,unquantified,unquantified,,,False,
+FastLED/FastLED,1998,unquantified,unquantified,,,False,
+Giorgi/DuckDB.NET,300,quantified,quantified,5.0,1.8,False,- ~80%
+JuliaLang/julia,60339,unquantified,unquantified,,,False,
+JuliaLang/julia,61826,quantified,unquantified,,,False,
+MetaMask/metamask-extension,39214,quantified,quantified,11.5,11.5;11.5,True,20ms | from 23 to 2 | from 23 state subscription checks to 2
+NethermindEth/nethermind,10590,quantified,unquantified,,,False,
+PrefectHQ/prefect,20096,quantified,quantified,,,False,156kb
+PrefectHQ/prefect,20454,quantified,quantified,4.0,4.0,True,from 24 to 6
+PrefectHQ/prefect,22060,unquantified,unquantified,,,False,
+QL-Win/QuickLook,1902,quantified,unquantified,,,False,
+SimonHalvdansson/Harmonic-HN,263,unquantified,unquantified,,,False,
+TracecatHQ/tracecat,1764,unquantified,unquantified,,,False,
+Z3Prover/z3,8877,quantified,none,2.0,,False,
+Z3Prover/z3,9215,unquantified,none,,,False,
+antiwork/gumroad,792,unquantified,unquantified,,,False,
+astral-sh/ruff,24623,quantified,unquantified,1.043,,False,
+browser-use/browser-use,3774,unquantified,unquantified,,,False,
+celestiaorg/celestia-app,7075,quantified,quantified,1.72,1724.895;0.25,False,1mb | 1mb | 681us | 396us | 4.08ms | 2.73ms | 2.74ms | 11.61ms | 32773 -> 19 | from 2051/8195/32771 to 19
+chrxh/alien,321,unquantified,unquantified,,,False,
+conchoecia/odp,107,unquantified,none,,,False,
+demergent-labs/azle,3058,quantified,unquantified,20.0,,False,
+dotnet/msbuild,12260,unquantified,unquantified,,,False,
+dotnet/roslyn,80734,unquantified,unquantified,,,False,
+dotnet/roslyn,82948,unquantified,unquantified,,,False,
+dotnet/roslyn,83470,unquantified,unquantified,,,False,
+dotnet/runtime,120630,unquantified,unquantified,,,False,
+dotnet/runtime,120633,unquantified,unquantified,,,False,
+dotnet/runtime,120886,unquantified,unquantified,,,False,
+dotnet/runtime,120916,unquantified,unquantified,,,False,
+dotnet/runtime,124647,unquantified,unquantified,,,False,
+dotnet/runtime,126201,unquantified,unquantified,,,False,
+dotnet/runtime,126841,unquantified,unquantified,,,False,
+dotnet/runtime,127779,unquantified,none,,,False,
+dotnet/runtime,128228,quantified,none,1.30,,False,
+duneanalytics/spellbook,9382,unquantified,unquantified,,,False,
+duneanalytics/spellbook,9384,unquantified,unquantified,,,False,
+duneanalytics/spellbook,9390,unquantified,unquantified,,,False,
+duneanalytics/spellbook,9391,unquantified,unquantified,,,False,
+gindemit/unity-rlottie,60,unquantified,unquantified,,,False,
+gluesql/glues,146,unquantified,unquantified,,,False,
+hathach/tinyusb,3542,unquantified,unquantified,,,False,
+hmislk/hmis,13695,unquantified,unquantified,,,False,
+jscarle/LightResults,63,unquantified,unquantified,,,False,
+kentcdodds/kentcdodds.com,683,unquantified,unquantified,,,False,
+langfuse/langfuse-docs,2143,none,quantified,,,False,5min
+langfuse/langfuse-docs,2144,unquantified,unquantified,,,False,
+ltwlf/json-diff-ts,300,unquantified,unquantified,,,False,
+maplibre/martin,2664,none,quantified,,,False,60s
+marin-community/marin,3398,quantified,quantified,1.035,,False,32.63 ms | 31.63 ms
+marin-community/marin,5023,unquantified,none,,,False,
+microsoft/ApplicationInsights-JS,2616,unquantified,unquantified,,,False,
+microsoft/magentic-ui,54,unquantified,unquantified,,,False,
+microsoft/onnxruntime,28588,quantified,quantified,,,False,6ms | 761ms
+microsoft/onnxruntime,28589,quantified,quantified,4.84,20.0;1.429;7.6;20.0;0.93,False,"1 thread | 8 threads | 8 threads | 20x slower | 30% faster | 7.6x speedup | 20x regression | 0.93x), due to fewer"
+microsoft/python-environment-tools,299,unquantified,unquantified,,,False,
+microsoft/testfx,5654,unquantified,unquantified,,,False,
+microsoft/vscode-pull-request-github,8597,unquantified,unquantified,,,False,
+mlflow/mlflow,17730,quantified,quantified,1.10,1.1,True,10% faster
+mlflow/mlflow,18983,unquantified,unquantified,,,False,
+mlflow/mlflow,19194,unquantified,unquantified,,,False,
+mlflow/mlflow,19368,unquantified,unquantified,,,False,
+mlflow/mlflow,22670,quantified,quantified,1.34,1.25;1.333,True,"8 s | 25.6 s | 19.1 s | 3.65 s | 2.87 s | 20 % wall-clock reduction | 25% single-process speedup, ~21% wall-clock reduction"
+modelcontextprotocol/csharp-sdk,1274,unquantified,quantified,,,False,8b
+moonbitlang/core,2780,unquantified,unquantified,,,False,
+oxc-project/oxc,12776,unquantified,unquantified,,,False,
+paradigmxyz/reth,22350,unquantified,unquantified,,,False,
+paradigmxyz/reth,22399,quantified,unquantified,,,False,
+primer/react,7411,quantified,unquantified,,,False,
+remotion-dev/remotion,7126,unquantified,none,,,False,
+rustfs/rustfs,449,quantified,unquantified,5.0,,False,
+ryokun6/ryos,360,none,unquantified,,,False,
+ryokun6/ryos,772,quantified,quantified,11.0,,False,190ms
+ryokun6/ryos,794,quantified,quantified,116.5,,False,2ms | 233ms
+ryokun6/ryos,1304,quantified,unquantified,1.132,,False,
+sikanhe/gqtx,79,unquantified,unquantified,,,False,
+softmaple/softmaple,680,quantified,quantified,3.73,,False,| 29.1 ms | | | 7.0 ms |
+softmaple/softmaple,683,quantified,quantified,1.24,,False,97.5 ms | 111.4 ms | | 76.8 ms | | | 178.0 ms |
+softmaple/softmaple,693,quantified,unquantified,,,False,
+sourcebot-dev/sourcebot,357,quantified,quantified,2.0,5.0;1.667;2.0,True,80% faster | 40% faster | 50% reduction
+swc-project/swc,11895,quantified,quantified,,,False,2.3us | 1.4us
+thorek1/MacroModelling.jl,112,none,none,,,False,
+umasteeringgroup/UMA,498,quantified,unquantified,1.2,,False,
+vitejs/vite,22151,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13133,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13306,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13535,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13536,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13631,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13674,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13935,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13955,unquantified,unquantified,,,False,
+web-infra-dev/rspack,14019,quantified,unquantified,1.147,,False,
+web-infra-dev/rspack,14097,unquantified,unquantified,,,False,
+web-infra-dev/rspack,14242,unquantified,unquantified,,,False,
+wolfSSL/wolfssh,779,none,none,,,False,
+xtermjs/xterm.js,5948,unquantified,none,,,False,
