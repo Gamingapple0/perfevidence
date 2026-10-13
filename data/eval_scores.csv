@@ -4,26 +4,26 @@ Azure/azure-sdk-tools,13031,unquantified,unquantified,,,False,
 AzureAD/microsoft-identity-web,3409,unquantified,unquantified,,,False,
 CapSoftware/Cap,1424,unquantified,unquantified,,,False,
 FastLED/FastLED,1998,unquantified,unquantified,,,False,
-Giorgi/DuckDB.NET,300,quantified,quantified,5.0,1.8,False,- ~80%
+Giorgi/DuckDB.NET,300,quantified,quantified,5,5.0,True,- ~80% | - ~80% | - ~80%
 JuliaLang/julia,60339,unquantified,unquantified,,,False,
-JuliaLang/julia,61826,quantified,unquantified,,,False,
-MetaMask/metamask-extension,39214,quantified,quantified,11.5,11.5;11.5,True,20ms | from 23 to 2 | from 23 state subscription checks to 2
-NethermindEth/nethermind,10590,quantified,unquantified,,,False,
-PrefectHQ/prefect,20096,quantified,quantified,,,False,156kb
-PrefectHQ/prefect,20454,quantified,quantified,4.0,4.0,True,from 24 to 6
+JuliaLang/julia,61826,quantified,quantified,,,False,producing the >100x slowdown reported in #61820.
+MetaMask/metamask-extension,39214,quantified,quantified,11.5,11.5,True,10-20ms) | 23 subscription checks -> ~5 | 20ms | from 23 to 2 | from 23 state subscription checks to 2 | from 23 to 2 | reduces useselector subscription overhead in the send flow by consolidating 23 i
+NethermindEth/nethermind,10590,quantified,quantified,,2.6;2.0;1.9;1.7;1.3;1.2;2.6;2.0;1.9;1.7;1.3;1.2,False,2.6x | 2.0x | 1.9x | 1.7x | 1.3x | 1.2x | 2.6x | 2.0x | 1.9x | 1.7x | 1.3x | 1.2x
+PrefectHQ/prefect,20096,quantified,quantified,,,False,156kb | the markdown bundle (~156kb) will now only load when users navigate to pages tha
+PrefectHQ/prefect,20454,quantified,quantified,4,4.0;4.0,True,from 24 to 6 | from 8 to 2 | from 24 to 6
 PrefectHQ/prefect,22060,unquantified,unquantified,,,False,
-QL-Win/QuickLook,1902,quantified,unquantified,,,False,
+QL-Win/QuickLook,1902,quantified,quantified,,,False,the blocking com chain - `activator.createinstance`  ->  `initialize`  ->  `dopr | // before: dopreview() blocks ui thread for 7-8s on first call
 SimonHalvdansson/Harmonic-HN,263,unquantified,unquantified,,,False,
 TracecatHQ/tracecat,1764,unquantified,unquantified,,,False,
-Z3Prover/z3,8877,quantified,none,2.0,,False,
+Z3Prover/z3,8877,quantified,quantified,2,2.0,True,halving
 Z3Prover/z3,9215,unquantified,none,,,False,
 antiwork/gumroad,792,unquantified,unquantified,,,False,
 astral-sh/ruff,24623,quantified,unquantified,1.043,,False,
 browser-use/browser-use,3774,unquantified,unquantified,,,False,
-celestiaorg/celestia-app,7075,quantified,quantified,1.72,1724.895;0.25,False,1mb | 1mb | 681us | 396us | 4.08ms | 2.73ms | 2.74ms | 11.61ms | 32773 -> 19 | from 2051/8195/32771 to 19
+celestiaorg/celestia-app,7075,quantified,quantified,1.72,1.72;8.0;107.947;1.495;8.741;431.316;4.237;8.941;1724.895,True,1mb | 1mb | 32773 -> 19 | from 2051/8195/32771 to 19 | 681us | 396us | 4.08ms | 2.73ms | 11.61ms | 2.74ms | 681us -> 396us | 144kb -> 18.0kb | 2051 -> 19 allocs/op | 4.08ms -> 2.73ms | 576kb -> 65.9kb | 8195 -> 19 allocs/op | 11.61ms -> 2.74ms | 2305kb -> 257.8kb | 32773 -> 19 allocs/op
 chrxh/alien,321,unquantified,unquantified,,,False,
 conchoecia/odp,107,unquantified,none,,,False,
-demergent-labs/azle,3058,quantified,unquantified,20.0,,False,
+demergent-labs/azle,3058,quantified,quantified,20,20.0,True,from ~20min to less than 1min | the test previously took around 20min to run because it tested all supported jav
 dotnet/msbuild,12260,unquantified,unquantified,,,False,
 dotnet/roslyn,80734,unquantified,unquantified,,,False,
 dotnet/roslyn,82948,unquantified,unquantified,,,False,
@@ -36,7 +36,7 @@ dotnet/runtime,124647,unquantified,unquantified,,,False,
 dotnet/runtime,126201,unquantified,unquantified,,,False,
 dotnet/runtime,126841,unquantified,unquantified,,,False,
 dotnet/runtime,127779,unquantified,none,,,False,
-dotnet/runtime,128228,quantified,none,1.30,,False,
+dotnet/runtime,128228,quantified,quantified,1.3,1.299;1.471;1.299;1.299;1.3;1.471;1.477;1.299;1.295,True,"-23 % | -32 % | -23 % | -23 % | 76,240 | 58,640 | -32 % | 69,472 | 47,024 | -23 % | 69,136 | 53,392"
 duneanalytics/spellbook,9382,unquantified,unquantified,,,False,
 duneanalytics/spellbook,9384,unquantified,unquantified,,,False,
 duneanalytics/spellbook,9390,unquantified,unquantified,,,False,
@@ -50,51 +50,51 @@ kentcdodds/kentcdodds.com,683,unquantified,unquantified,,,False,
 langfuse/langfuse-docs,2143,none,quantified,,,False,5min
 langfuse/langfuse-docs,2144,unquantified,unquantified,,,False,
 ltwlf/json-diff-ts,300,unquantified,unquantified,,,False,
-maplibre/martin,2664,none,quantified,,,False,60s
-marin-community/marin,3398,quantified,quantified,1.035,,False,32.63 ms | 31.63 ms
+maplibre/martin,2664,none,quantified,,,False,60s | 60s | - `justfile`: `bench-http` now takes `requests='5000'` and `pg_requests='1000'` 
+marin-community/marin,3398,quantified,quantified,1.035,1.035,True,from `32.67/32.63 ms` to `31.57 | 32.63 ms | 31.63 ms | from `32.67/32.63 ms` to `31.57
 marin-community/marin,5023,unquantified,none,,,False,
 microsoft/ApplicationInsights-JS,2616,unquantified,unquantified,,,False,
 microsoft/magentic-ui,54,unquantified,unquantified,,,False,
-microsoft/onnxruntime,28588,quantified,quantified,,,False,6ms | 761ms
-microsoft/onnxruntime,28589,quantified,quantified,4.84,20.0;1.429;7.6;20.0;0.93,False,"1 thread | 8 threads | 8 threads | 20x slower | 30% faster | 7.6x speedup | 20x regression | 0.93x), due to fewer"
+microsoft/onnxruntime,28588,quantified,quantified,,,False,761ms | 6ms
+microsoft/onnxruntime,28589,quantified,quantified,,4.8;1.1;4.84;5.46;4.99;5.21;4.87;5.47;7.61,False,"20x slower | 2-bit dequantization, 1 thread -> 8 | 7.6x speedup | 30% faster | 20x slower | 7.6x speedup | 30% faster | 20x regression | 0.93x), due to fewer | 1 thread | 8 threads | 8 threads | **4.8-7.6x | 10-30% | 4.84x | 5.46x | 4.99x | 5.21x | 4.87x | 5.47x | 7.61x | it ran ~20x slower than the `bits=4` mlas path because it was a tight scalar `fo | - the original ~20x regression (issue #28552) is fully resolved"
 microsoft/python-environment-tools,299,unquantified,unquantified,,,False,
 microsoft/testfx,5654,unquantified,unquantified,,,False,
 microsoft/vscode-pull-request-github,8597,unquantified,unquantified,,,False,
-mlflow/mlflow,17730,quantified,quantified,1.10,1.1,True,10% faster
+mlflow/mlflow,17730,quantified,quantified,1.1,1.1,True,10% faster | ~10%
 mlflow/mlflow,18983,unquantified,unquantified,,,False,
 mlflow/mlflow,19194,unquantified,unquantified,,,False,
 mlflow/mlflow,19368,unquantified,unquantified,,,False,
-mlflow/mlflow,22670,quantified,quantified,1.34,1.25;1.333,True,"8 s | 25.6 s | 19.1 s | 3.65 s | 2.87 s | 20 % wall-clock reduction | 25% single-process speedup, ~21% wall-clock reduction"
+mlflow/mlflow,22670,quantified,quantified,1.34,1.21;1.333;1.266;1.34;1.272,True,"25% single-process speedup, ~21% wall-clock reduction | 25% single-process speedup, ~21% wall-clock reduction | 3.65 s -> 2.87 | 20 % wall-clock reduction | 25.6 s | 19.1 s | 3.65 s | 2.87 s | 8 s | ~21% | -25 % | -21 % | **25.6 s -> 19.1 s | **3.65 s -> 2.87 s"
 modelcontextprotocol/csharp-sdk,1274,unquantified,quantified,,,False,8b
 moonbitlang/core,2780,unquantified,unquantified,,,False,
 oxc-project/oxc,12776,unquantified,unquantified,,,False,
 paradigmxyz/reth,22350,unquantified,unquantified,,,False,
-paradigmxyz/reth,22399,quantified,unquantified,,,False,
+paradigmxyz/reth,22399,quantified,quantified,,,False,jaeger traces show this costs ~2.56ms even for near-empty blocks on devnet - the | eliminates ~2.56ms of fixed overhead per near-empty block from worker pool spawn
 primer/react,7411,quantified,unquantified,,,False,
 remotion-dev/remotion,7126,unquantified,none,,,False,
-rustfs/rustfs,449,quantified,unquantified,5.0,,False,
+rustfs/rustfs,449,quantified,quantified,5,5.0;3.0,True,(5-10x | 3-5x
 ryokun6/ryos,360,none,unquantified,,,False,
-ryokun6/ryos,772,quantified,quantified,11.0,,False,190ms
-ryokun6/ryos,794,quantified,quantified,116.5,,False,2ms | 233ms
-ryokun6/ryos,1304,quantified,unquantified,1.132,,False,
+ryokun6/ryos,772,quantified,quantified,11,,False,"190ms | the `vercel dev` proxy adds ~190ms latency per http request, causing initial pag"
+ryokun6/ryos,794,quantified,quantified,116.5,116.5,True,from 233ms to 2 | 233ms | 2ms | from 233ms to 2ms | chrome profiling identified a 233ms javascript processing bottleneck during inte
+ryokun6/ryos,1304,quantified,quantified,1.132,1.132,True,from ~231.72 kb to ~204.71 kb
 sikanhe/gqtx,79,unquantified,unquantified,,,False,
-softmaple/softmaple,680,quantified,quantified,3.73,,False,| 29.1 ms | | | 7.0 ms |
-softmaple/softmaple,683,quantified,quantified,1.24,,False,97.5 ms | 111.4 ms | | 76.8 ms | | | 178.0 ms |
+softmaple/softmaple,680,quantified,quantified,3.73,3.7;1.8;3.7;3.731;1.8;1.795,True,| 29.1 ms | | | 7.0 ms | | ~3.7x | ~1.8x | ~3.7x | 29.1 ms | 7.8 ms | ~1.8x | 7.0 ms | 3.9 ms
+softmaple/softmaple,683,quantified,quantified,1.24,1.24;1.31;1.14;1.24;1.245;1.31;1.305;1.14;1.143,True,111.4 ms | 97.5 ms | | 76.8 ms | | | 178.0 ms | | | 111.4 ms | | 1.24x | 1.31x | 1.14x | 1.24x | 76.8 ms | 61.7 ms | 1.31x | 178.0 ms | 136.4 ms | 1.14x | 111.4 ms | 97.5 ms
 softmaple/softmaple,693,quantified,unquantified,,,False,
-sourcebot-dev/sourcebot,357,quantified,quantified,2.0,5.0;1.667;2.0,True,80% faster | 40% faster | 50% reduction
-swc-project/swc,11895,quantified,quantified,,,False,2.3us | 1.4us
+sourcebot-dev/sourcebot,357,quantified,quantified,2,2.0;1.7;1.3,True,80% faster | 40% faster | 80% faster | 40% faster | 50% reduction | 50% | - 70-80% | - 30-40%
+swc-project/swc,11895,quantified,quantified,,,False,"2.3us | 2.3us | 1.4us | - **instructions decreased** by ~1us (fewer call/ret overhead) ✅ | - **net regression**: +1.4us (+5.58%) | for the tiny `colors.js` benchmark (1.1 kb, 63 lines), the cache penalty exceeds"
 thorek1/MacroModelling.jl,112,none,none,,,False,
-umasteeringgroup/UMA,498,quantified,unquantified,1.2,,False,
+umasteeringgroup/UMA,498,quantified,quantified,1.2,1.2;1.4;1.6,True,20-40% | 40-80% | 60-120%
 vitejs/vite,22151,unquantified,unquantified,,,False,
 web-infra-dev/rspack,13133,unquantified,unquantified,,,False,
 web-infra-dev/rspack,13306,unquantified,unquantified,,,False,
 web-infra-dev/rspack,13535,unquantified,unquantified,,,False,
 web-infra-dev/rspack,13536,unquantified,unquantified,,,False,
-web-infra-dev/rspack,13631,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13631,none,unquantified,,,False,
 web-infra-dev/rspack,13674,unquantified,unquantified,,,False,
 web-infra-dev/rspack,13935,unquantified,unquantified,,,False,
 web-infra-dev/rspack,13955,unquantified,unquantified,,,False,
-web-infra-dev/rspack,14019,quantified,unquantified,1.147,,False,
+web-infra-dev/rspack,14019,quantified,quantified,1.147,1.147;1.163;1.383,True,"`206,953,778 ir / 21.02%` -> `180,452,234 ir | `198,176,821 ir / 20.11%` -> `170,473,655 ir | `95,635,219 ir / 9.71%` -> `69,132,649 ir"
 web-infra-dev/rspack,14097,unquantified,unquantified,,,False,
 web-infra-dev/rspack,14242,unquantified,unquantified,,,False,
 wolfSSL/wolfssh,779,none,none,,,False,

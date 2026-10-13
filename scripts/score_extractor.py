@@ -34,6 +34,8 @@ def report(out, conf):
         lines.append(f'{name:11s} {pr(tp, fp, fn)}')
     g = [o for o in out if o['gold_r_c']]
     lines.append(f'r_c recall  {sum(o["r_c_hit"] for o in g)}/{len(g)} headline ratios recovered within 5%')
+    extra = [o for o in out if o['pred_r_c'] and not o['gold_r_c']]
+    lines.append(f'r_c extra   {len(extra)} PRs get a ratio where the label has none')
     return '\n'.join(lines)
 
 if __name__ == '__main__':
