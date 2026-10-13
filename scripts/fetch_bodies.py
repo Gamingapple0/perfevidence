@@ -5,14 +5,15 @@ import csv, json, os, sys, time, urllib.request
 from pathlib import Path
 
 def get(url, token):
-    req = urllib.request.Request(url, headers={'Authorization': f'Bearer {token}',
+    auth = {'Authorization': f'Bearer {token}'} if token else {}
+    req = urllib.request.Request(url, headers={**auth,
                                                'Accept': 'application/vnd.github+json',
                                                'X-GitHub-Api-Version': '2022-11-28'})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 
 def main(sample_csv, out):
-    token = os.environ['GITHUB_TOKEN']
+    token = os.environ.get('GITHUB_TOKEN')  # optional: unauthenticated gets 60 requests an hour
     done = {json.loads(l)['html_url'] for l in Path(out).read_text().splitlines()} if Path(out).exists() else set()
     with open(out, 'a') as f:
         for row in csv.DictReader(open(sample_csv)):
