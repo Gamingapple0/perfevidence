@@ -2,7 +2,7 @@
 
 Checks performance claims in AI-agent pull requests. Finds claims like "2x faster" in a PR description, runs the repo's own benchmarks that reach the changed code on base and head, and posts a verdict with numbers.
 
-Status: week 1, building the evaluation sample. The GitHub Action does not exist yet.
+Status: week 2, claim extractor evaluated. The GitHub Action does not exist yet.
 
 ## Evaluation sample (reproduce)
 
@@ -31,6 +31,21 @@ Bench tiers: `adapter` = repo has a `bench`/`benchmark` npm script or vitest `*.
 `src/claims.py` finds performance claims in a PR's title and description and parses the claimed gain ratio (`r_c`, e.g. 2.0 for "2x faster", 1.67 for "40% less memory"). Evaluation set: `scripts/build_eval_set.py` draws 100 random agentic PRs (seed 20261011) without looking at extractor output; bodies via `fetch_bodies.py data/eval_set.csv data/eval_prs.jsonl`.
 
 Hand labels: `data/eval_labels.csv`, written from the PR title and body only, before the extractor was run on these PRs (see commit order); the `checked` column is for a second rater. Rules: `quantified` = the body gives a number for this PR's performance effect (any Purdue dimension D1-D9, including call/query counts and sizes; also a baseline-only number such as "UI froze for 7-8 s" that the PR claims to remove); `unquantified` = claims a perf gain with no such number; `none` = no perf-gain claim. Bot boilerplate is ignored, but bot summaries (cubic, CodeRabbit, Ellipsis) count because the Action sees them. `r_c` = the headline claimed ratio: the first comparative claim, taking the lower bound of a range; blank when no ratio can be derived.
+
+Two refinements from checking the dev labels (13 Oct 2026): a change described only by technique (vectorize, parallelize, run async) with no stated effect is `none`; a stated removal of work ("redundant", "unnecessary", "avoids X") is `unquantified`. `scripts/check_labels.py` confirms every quoted evidence span appears in the PR text.
+
+Held-out set: the 100 PRs above became the dev set used to fix the ratio parser (`src/ratios.py`). A second draw of 50 agentic PRs (seed 20261013, dev PRs excluded, `data/holdout_set.csv`) was labelled blind and committed before the extractor was run on it:
+
+```sh
+python scripts/build_eval_set.py rq1_labels.csv data/holdout_set.csv 50 20261013 data/eval_set.csv
+python scripts/fetch_bodies.py data/holdout_set.csv data/holdout_prs.jsonl
+python scripts/score_extractor.py data/holdout_prs.jsonl data/holdout_labels.csv data/holdout_scores.csv
+```
+
+| Set | Any claim P / R | Quantified P / R | Headline r_c within 5% |
+|---|---|---|---|
+| Dev (100, after fixes) | 0.96 / 0.94 | 0.90 / 0.90 | 18 / 20 |
+| Held-out (50) | 0.98 / 0.87 | 0.81 / 0.93 | 8 / 11 |
 
 Dimension detection is the deterministic extractor from the Purdue study, vendored unchanged in `src/metric_patterns.py` and `src/purdue_extract.py` (MIT, source commit in the file headers). Self-check: `cd src && python claims.py`.
 

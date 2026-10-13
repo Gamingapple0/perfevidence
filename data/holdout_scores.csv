@@ -1,0 +1,51 @@
+repo,number,gold,pred,gold_r_c,pred_r_c,r_c_hit,quants
+CarGuo/gsy_github_app_flutter,913,unquantified,unquantified,,,False,
+CommunityToolkit/Aspire,1355,unquantified,unquantified,,,False,
+EvotecIT/Mailozaurr,590,unquantified,none,,,False,
+FastLED/FastLED,2025,quantified,quantified,1.45,1.45,True,45-67%
+J-Tech-Japan/Sekiban,961,unquantified,unquantified,,,False,
+J-Tech-Japan/Sekiban,970,unquantified,none,,,False,
+J-Tech-Japan/Sekiban,973,quantified,quantified,2.328,,False,479.6 events/sec | 1388.2 events/sec | 1116.3 events/sec | 479.6 events/sec | 1388.2 events/sec | 1116.3 events/sec | 7 gb | 7 gb
+MetaMask/metamask-extension,39315,quantified,quantified,2.5,2.5;2.5;20.0;20.0,True,80% reduction | 75% reduction in polling overhead | 60-75% | 60-80% | - 95% | - 95% | **impact:** 60-75% reduction in polling overhead when feature flag enabled. | > | open asset picker modal | 60-75% | **55-70%** | modal opening has other over
+MetaMask/metamask-extension,42685,unquantified,unquantified,,,False,
+OrchardCMS/OrchardCore,18821,unquantified,none,,,False,
+astral-sh/uv,19383,quantified,quantified,1.078,,False,"from 512.8ms on main, to 475.9 | 512.8ms | 475.9ms"
+bmander/graphserver,52,quantified,quantified,80,80.0;80.0;80.0;80.0;1.5;80.0,True,"5s | 0.5s | 80x speedup | 40s | 0.5s | 42.642s | 0.5s | 40s | 80x through provider improvements | 80x through provider improvements | 80x performance improvement | from 6 to 4 | 80x | (80x | (80x | (80x | from 6 to 4 | from 40s to 0.5s | this pr addresses the critical performance issue where path planning on large st | - large street graphs (1m vertices, 250k edges) took ~5s for cross-city routes | - even small synthetic networks in performance tests took 40s"
+cartography-cncf/cartography,2706,unquantified,unquantified,,,False,
+chrxh/alien,460,none,quantified,,,False,8 threads | 8 threads
+dotnet/extensions,7000,unquantified,unquantified,,,False,
+dotnet/extensions,7027,unquantified,unquantified,,,False,
+dotnet/machinelearning,7580,unquantified,quantified,,,False,128b | 128b
+dotnet/runtime,122389,quantified,quantified,,,False,"| 364.3 us | | | 13.75 us | | | 358.5 us | | | 405.2 us | | | 368.0 us | | | 904.1 ms | | | 11.43 ms | | | 891.6 ms | | | 896.3 ms | | | 900.6 ms | | | 282.0 us | | | 2.56 us | | | 279.8 us | | | 280.4 us | | | 281.3 us | | memorydiagnoser] [mincolumn, maxcolumn, q1column, q3column,  | allocated | |----------- |---------:|---------:|---------:|- | gen0 | gen1 | allocated | |----------- | appendints | 282.0 "
+dotnet/runtime,128505,unquantified,none,,,False,
+hmislk/hmis,18420,quantified,quantified,18,18.0;520.0;170.0;170.0;18.0;18.75,True,180s | 180s | 18x faster | 520x faster | 170x faster | 170x faster | 18x faster | 18x faster | 520x faster | 170x faster | 170x faster | 18x faster | 30s | 1.6s | 52s | 100ms | 17s | 100ms | 17s | 100ms | 180s | 10s | | 30s | | | 52s | | | 17s | | | 17s | | | **180s** | | **18x | **520x | **170x | **170x | **18x | 30s | 1.6s
+jkroepke/openvpn-auth-oauth2,641,none,none,,,False,
+jscarle/LightResults,75,unquantified,unquantified,,,False,
+langfuse/langfuse,11921,quantified,quantified,3.448,3.448;3.448;3.571;100.0;3.523,True,"71% reduction), 3.84mb -> 1.09 | memory_usage)) as total_memory_used, round(avg(read_rows)) a | 71% | 71% | 72% | 99% | 3.84mb -> 1.09mb | **122,011  ->  34,793 rows (71% reduction), 3.84mb  ->  1.09mb (72% reduction)**"
+longbridge/gpui-component,2400,unquantified,unquantified,,,False,
+lynx-family/lynx-stack,1385,unquantified,unquantified,,,False,
+maplibre/martin,2688,unquantified,unquantified,,,False,
+maxbbraun/accent,47,unquantified,unquantified,,,False,
+microsoft/typespec,10718,unquantified,unquantified,,,False,
+mlflow/mlflow,22403,unquantified,unquantified,,,False,
+modelcontextprotocol/csharp-sdk,1070,unquantified,quantified,,,False,- changed `blob` from `string` to `readonlymemory ` for base64-encoded utf-8b
+modular/modular,6243,quantified,unquantified,,,False,
+moonbitlang/core,2255,unquantified,unquantified,,,False,
+open-webui/open-webui,25070,unquantified,unquantified,,,False,
+oxc-project/oxc,13098,unquantified,unquantified,,,False,
+oxc-project/oxc,13593,unquantified,unquantified,,,False,
+oxc-project/oxc,22601,unquantified,unquantified,,,False,
+primer/react,7249,quantified,quantified,,,False,120fps
+reflex-dev/reflex-web,1323,unquantified,none,,,False,
+rustfs/rustfs,461,quantified,quantified,1.667,1.667;5.0,True,"50 mb/s | 50 mb/s | 70%, and lower | 70%, and lower | from 20 to 4 | 50 mb | 50 mb | 50 mb | from 60s to 300 | 60s | 300s | 40-60% | from 20 to 4 | these changes collectively aim to reduce write latency by 40-60%, decrease disk "
+ryokun6/ryos,1034,unquantified,unquantified,,,False,
+ryokun6/ryos,1217,unquantified,unquantified,,,False,
+ryokun6/ryos,1355,quantified,quantified,1.429,1.244;1.436,True,226 kb | 116 kb | 516.99 kb | (56 -> 45 kb | 742.55 kb -> 516.99 kb | | `audio` (tone/wavesurfer) | ~93 kb | `types/types.ts` value-imported `wavesurf
+selcukorkmaz/fastml,118,none,none,,,False,
+selcukorkmaz/fastml,121,unquantified,unquantified,,,False,
+swc-project/swc,11853,quantified,quantified,1.132,1.132;1.001;1.001,True,11.6295% | 0.0791% | 0.1205%
+temporalio/temporal,7896,quantified,quantified,1.462,1.32,False,13.616 s | 9.314 s | 32% speedup | 32% speedup | 9.803 s | 3.450 s | 9.038 s | 9.529 s | 13.6s | 9.3s | 32%
+thorek1/MacroModelling.jl,118,unquantified,none,,,False,
+web-infra-dev/rspack,13020,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13668,unquantified,unquantified,,,False,
+web-infra-dev/rspack,13851,unquantified,unquantified,,,False,
