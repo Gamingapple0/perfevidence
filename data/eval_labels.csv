@@ -1,101 +1,101 @@
 url,repo,number,status,r_c,evidence,note,checked
-https://github.com/Azure/azure-mcp/pull/958,Azure/azure-mcp,958,unquantified,,"""significantly faster execution"" (parallel deploy)",,
-https://github.com/Azure/azure-sdk-tools/pull/13031,Azure/azure-sdk-tools,13031,unquantified,,"""Reduced API calls""",,
-https://github.com/AzureAD/microsoft-identity-web/pull/3409,AzureAD/microsoft-identity-web,3409,unquantified,,"""significantly faster than string interpolation""",,
-https://github.com/CapSoftware/Cap/pull/1424,CapSoftware/Cap,1424,unquantified,,"""drastically reduce video export times""",,
-https://github.com/FastLED/FastLED/pull/1998,FastLED/FastLED,1998,unquantified,,"""optimize compilation speed""",,
-https://github.com/Giorgi/DuckDB.NET/pull/300,Giorgi/DuckDB.NET,300,quantified,5.0,"""~80% reduction in allocations for VarInt operations""",,
-https://github.com/JuliaLang/julia/pull/60339,JuliaLang/julia,60339,unquantified,,"""faster instruction selection""",,
-https://github.com/JuliaLang/julia/pull/61826,JuliaLang/julia,61826,quantified,,""">100x slowdown reported in #61820""",baseline-only: number describes the bug fixed; results only in images,
-https://github.com/MetaMask/metamask-extension/pull/39214,MetaMask/metamask-extension,39214,quantified,11.5,"""23 to 2"" useSelector subscriptions","also ""expected 10-20ms"" INP with no baseline",
-https://github.com/NethermindEth/nethermind/pull/10590,NethermindEth/nethermind,10590,quantified,,variance range 20.8% -> 7.9% (2.6x) etc.,"stability claim, not speed; ""Throughput unchanged""",
-https://github.com/PrefectHQ/prefect/pull/20096,PrefectHQ/prefect,20096,quantified,,"""~156KB"" bundle deferred","no baseline, no ratio",
-https://github.com/PrefectHQ/prefect/pull/20454,PrefectHQ/prefect,20454,quantified,4.0,"""queries per active work pool from 8 to 2""",also 24 -> 6,
-https://github.com/PrefectHQ/prefect/pull/22060,PrefectHQ/prefect,22060,unquantified,,"""reduces repeated API reads""",,
-https://github.com/QL-Win/QuickLook/pull/1902,QL-Win/QuickLook,1902,quantified,,"""freezing the entire UI for 7-8 seconds""","baseline number only, no after value",
-https://github.com/SimonHalvdansson/Harmonic-HN/pull/263,SimonHalvdansson/Harmonic-HN,263,unquantified,,"""Gradle optimizations for faster sync""",,
-https://github.com/TracecatHQ/tracecat/pull/1764,TracecatHQ/tracecat,1764,unquantified,,"""better throughput""","10s timeout is config, not a claim",
-https://github.com/Z3Prover/z3/pull/8877,Z3Prover/z3,8877,quantified,2.0,"""halving the number of expensive big-integer operations""","op-count claim (D4), not measured",
-https://github.com/Z3Prover/z3/pull/9215,Z3Prover/z3,9215,unquantified,,"redundant mk_literal call is ""pure waste""",,
-https://github.com/antiwork/gumroad/pull/792,antiwork/gumroad,792,unquantified,,"""Eliminates N+1 queries""",,
-https://github.com/astral-sh/ruff/pull/24623,astral-sh/ruff,24623,quantified,1.043,"""public delta: 4.32%""",direction of delta not stated; shadow delta 1.66%,
-https://github.com/browser-use/browser-use/pull/3774,browser-use/browser-use,3774,unquantified,,"""faster execution""",,
-https://github.com/celestiaorg/celestia-app/pull/7075,celestiaorg/celestia-app,7075,quantified,1.72,"""681us -> 396us""","first of several; 4.08->2.73ms (1.49), 11.61->2.74ms (4.24), allocs 2051->19; single-run sample",
-https://github.com/chrxh/alien/pull/321,chrxh/alien,321,unquantified,,O(1) ring buffer index,perf words only in title and quoted prompt,
-https://github.com/conchoecia/odp/pull/107,conchoecia/odp,107,unquantified,,"""reduce file size""",,
-https://github.com/demergent-labs/azle/pull/3058,demergent-labs/azle,3058,quantified,20.0,"""from ~20 minutes to less than 1 minute""","CI time (D7); ""<1 min"" so ratio is a lower bound",
-https://github.com/dotnet/msbuild/pull/12260,dotnet/msbuild,12260,unquantified,,"""improve performance ... reduced contention""",,
-https://github.com/dotnet/roslyn/pull/80734,dotnet/roslyn,80734,unquantified,,"""more efficient implementation""",,
-https://github.com/dotnet/roslyn/pull/82948,dotnet/roslyn,82948,unquantified,,"""Remove unnecessary NameValueCollection allocation""",,
-https://github.com/dotnet/roslyn/pull/83470,dotnet/roslyn,83470,unquantified,,"""reach ... state much more quickly""",,
-https://github.com/dotnet/runtime/pull/120630,dotnet/runtime,120630,unquantified,,"""faster ones to NativeMemory""","perf claim only in quoted issue; ""16 allocations replaced"" is a code count",
-https://github.com/dotnet/runtime/pull/120633,dotnet/runtime,120633,unquantified,,"""better performance"", ""reduce allocations""",issue has benchmark code but no results,
-https://github.com/dotnet/runtime/pull/120886,dotnet/runtime,120886,unquantified,,earlier fail-fast optimization,,
-https://github.com/dotnet/runtime/pull/120916,dotnet/runtime,120916,unquantified,,early fail-fast optimization,,
-https://github.com/dotnet/runtime/pull/124647,dotnet/runtime,124647,unquantified,,vectorize hot-path loops,,
-https://github.com/dotnet/runtime/pull/126201,dotnet/runtime,126201,unquantified,,"""eliminates those intermediate allocations""","""one free instead of N+1"" not numeric",
-https://github.com/dotnet/runtime/pull/126841,dotnet/runtime,126841,unquantified,,"""recently optimized [Intrinsic] vector helpers""",,
-https://github.com/dotnet/runtime/pull/127779,dotnet/runtime,127779,unquantified,,"""O(n^2) copying"" -> doubling",big-O is not a numeric gain,
-https://github.com/dotnet/runtime/pull/128228,dotnet/runtime,128228,quantified,1.30,"apphost 76,240 -> 58,640 bytes (-23%)","also dotnet -32% (1.48), libnethost -23%",
-https://github.com/duneanalytics/spellbook/pull/9382,duneanalytics/spellbook,9382,unquantified,,"""significantly improving query performance""",,
-https://github.com/duneanalytics/spellbook/pull/9384,duneanalytics/spellbook,9384,unquantified,,"""significantly reduces the data scanned""",,
-https://github.com/duneanalytics/spellbook/pull/9390,duneanalytics/spellbook,9390,unquantified,,"""improve query performance""",,
-https://github.com/duneanalytics/spellbook/pull/9391,duneanalytics/spellbook,9391,unquantified,,"""significantly improve query performance""",,
-https://github.com/gindemit/unity-rlottie/pull/60,gindemit/unity-rlottie,60,unquantified,,"""drain completed renders faster""",,
-https://github.com/gluesql/glues/pull/146,gluesql/glues,146,unquantified,,"""optimize keymap rendering""",,
-https://github.com/hathach/tinyusb/pull/3542,hathach/tinyusb,3542,unquantified,,removes runtime division from hot path,,
-https://github.com/hmislk/hmis/pull/13695,hmislk/hmis,13695,unquantified,,"""Improve lab data loading and update efficiency""",,
-https://github.com/jscarle/LightResults/pull/63,jscarle/LightResults,63,unquantified,,"""reduce reflection in Error.ToString""",,
-https://github.com/kentcdodds/kentcdodds.com/pull/683,kentcdodds/kentcdodds.com,683,unquantified,,"""to improve performance"" (cache)","12h TTL and 3d SWR are config, not claims",
-https://github.com/langfuse/langfuse-docs/pull/2143,langfuse/langfuse-docs,2143,none,,caching headers 5 min -> 1 hour,cache TTL change; no perf-gain claim stated,
-https://github.com/langfuse/langfuse-docs/pull/2144,langfuse/langfuse-docs,2144,unquantified,,"""improves initial page load performance""",,
-https://github.com/ltwlf/json-diff-ts/pull/300,ltwlf/json-diff-ts,300,unquantified,,"""Smaller bundle size"", ""Better performance""",,
-https://github.com/maplibre/martin/pull/2664,maplibre/martin,2664,none,,"benchmark run by request count, not duration","benchmark reproducibility, not a perf change",
-https://github.com/marin-community/marin/pull/3398,marin-community/marin,3398,quantified,1.035,"""32.67/32.63 ms to 31.57/31.63 ms""",,
-https://github.com/marin-community/marin/pull/5023,marin-community/marin,5023,unquantified,,"move rendering ""out of the document scan hot path""",,
-https://github.com/microsoft/ApplicationInsights-JS/pull/2616,microsoft/ApplicationInsights-JS,2616,unquantified,,"""enabling better tree-shaking""",,
-https://github.com/microsoft/magentic-ui/pull/54,microsoft/magentic-ui,54,unquantified,,"""reduce build times""",,
-https://github.com/microsoft/onnxruntime/pull/28588,microsoft/onnxruntime,28588,quantified,,"""~761ms"" vs ""~6ms"" optimized impl (129x gap)","baseline-only: gap is to another implementation, no after number for this PR",
-https://github.com/microsoft/onnxruntime/pull/28589,microsoft/onnxruntime,28589,quantified,4.84,"""4.8-7.6x speedup with 8 threads""","1 vs 8 threads, not base vs head; also ""2-bit now 10-30% faster than 4-bit"" and ""~20x regression fully resolved""",
-https://github.com/microsoft/python-environment-tools/pull/299,microsoft/python-environment-tools,299,unquantified,,"""O(1) cloning ... instead of O(n) deep copies""",,
-https://github.com/microsoft/testfx/pull/5654,microsoft/testfx,5654,unquantified,,"""significantly improve performance""",,
-https://github.com/microsoft/vscode-pull-request-github/pull/8597,microsoft/vscode-pull-request-github,8597,unquantified,,"""Branches should appear instantly""",,
-https://github.com/mlflow/mlflow/pull/17730,mlflow/mlflow,17730,quantified,1.10,"""Bulk operations complete ~10% faster""",,
-https://github.com/mlflow/mlflow/pull/18983,mlflow/mlflow,18983,unquantified,,"""more performant (avoids loading entire file into memory)""",,
-https://github.com/mlflow/mlflow/pull/19194,mlflow/mlflow,19194,unquantified,,"""Improves test performance""","""~117 lines"" is code size",
-https://github.com/mlflow/mlflow/pull/19368,mlflow/mlflow,19368,unquantified,,"""for faster execution""",,
-https://github.com/mlflow/mlflow/pull/22670,mlflow/mlflow,22670,quantified,1.34,"""Single-process lint: 25.6 s -> 19.1 s (-25 %)""","agent text says ""~25% speedup"", which a naive +p reading gives 1.25; measured times give 1.34",
-https://github.com/modelcontextprotocol/csharp-sdk/pull/1274,modelcontextprotocol/csharp-sdk,1274,unquantified,,"""eliminates those intermediate allocations""",,
-https://github.com/moonbitlang/core/pull/2780,moonbitlang/core,2780,unquantified,,"""to improve performance""","""18 operations removed"" is a code count",
-https://github.com/oxc-project/oxc/pull/12776,oxc-project/oxc,12776,unquantified,,"""Eliminates unnecessary heap allocations""",,
-https://github.com/paradigmxyz/reth/pull/22350,paradigmxyz/reth,22350,unquantified,,release lock during expensive work,,
-https://github.com/paradigmxyz/reth/pull/22399,paradigmxyz/reth,22399,quantified,,"""Eliminates ~2.56ms of fixed overhead per near-empty block""",saving with no total baseline,
-https://github.com/primer/react/pull/7411,primer/react,7411,quantified,,"""INP > 200ms"" -> ""< 200ms""","speculative, threshold only, no ratio",
-https://github.com/remotion-dev/remotion/pull/7126,remotion-dev/remotion,7126,unquantified,,urgent updates can preempt waveform drawing,,
-https://github.com/rustfs/rustfs/pull/449,rustfs/rustfs,449,quantified,5.0,"""5-10x for small files, 2-3x for large files, 3-5x overall""","first claim, lower bound; unmeasured",
-https://github.com/ryokun6/ryos/pull/360,ryokun6/ryos,360,none,,move transcripts to IndexedDB to avoid quota,"reliability, not perf",
-https://github.com/ryokun6/ryos/pull/772,ryokun6/ryos,772,quantified,11.0,"initial load ""~33 seconds"" -> ""~3s DOMContentLoaded""",,
-https://github.com/ryokun6/ryos/pull/794,ryokun6/ryos,794,quantified,116.5,"""reducing processing duration from 233ms to 2ms""",,
-https://github.com/ryokun6/ryos/pull/1304,ryokun6/ryos,1304,quantified,1.132,"""iPod app chunk reduced from ~231.72 kB to ~204.71 kB""","in testing log, not summary",
-https://github.com/sikanhe/gqtx/pull/79,sikanhe/gqtx,79,unquantified,,"""O(n) -> O(1) complexity improvement""",,
-https://github.com/softmaple/softmaple/pull/680,softmaple/softmaple,680,quantified,3.73,"""updateItem x 20 000: 29.1 ms -> 7.8 ms (~3.7x)""",also positionOf 7.0 -> 3.9 ms (1.8x),
-https://github.com/softmaple/softmaple/pull/683,softmaple/softmaple,683,quantified,1.24,"""76.8 ms -> 61.7 ms (1.24x)""","also 1.31x, 1.14x",
-https://github.com/softmaple/softmaple/pull/693,softmaple/softmaple,693,quantified,,"""O(N) string work instead of O(N^2)""; pre-fix ""~1.25 GiB""",baseline-only,
-https://github.com/sourcebot-dev/sourcebot/pull/357,sourcebot-dev/sourcebot,357,quantified,2.0,"""50% reduction in database queries""",other % figures are future opportunities,
-https://github.com/swc-project/swc/pull/11895,swc-project/swc,11895,quantified,,"""Net regression: +1.4 us (+5.58%)""",baseline-only: number describes the regression being fixed,
-https://github.com/thorek1/MacroModelling.jl/pull/112,thorek1/MacroModelling.jl,112,none,,cached block decomposition,no perf claim stated,
-https://github.com/umasteeringgroup/UMA/pull/498,umasteeringgroup/UMA,498,quantified,1.2,"""Mobile: 20-40% faster mesh combining""","""expected"", unmeasured; first claim, lower bound",
-https://github.com/vitejs/vite/pull/22151,vitejs/vite,22151,unquantified,,"""skipping both DNS lookups and all async overhead""",,
-https://github.com/web-infra-dev/rspack/pull/13133,web-infra-dev/rspack,13133,unquantified,,"hash work ""happens in parallel""",,
-https://github.com/web-infra-dev/rspack/pull/13306,web-infra-dev/rspack,13306,unquantified,,"""ids list stays lightweight"", ""without cloning""",,
-https://github.com/web-infra-dev/rspack/pull/13535,web-infra-dev/rspack,13535,unquantified,,"bucket instead of ""scanning the full map""",,
-https://github.com/web-infra-dev/rspack/pull/13536,web-infra-dev/rspack,13536,unquantified,,narrow module-group scanning,,
-https://github.com/web-infra-dev/rspack/pull/13631,web-infra-dev/rspack,13631,unquantified,,"""narrow performance experiment""",no gain stated,
-https://github.com/web-infra-dev/rspack/pull/13674,web-infra-dev/rspack,13674,unquantified,,"""should reduce serial overhead""",,
-https://github.com/web-infra-dev/rspack/pull/13935,web-infra-dev/rspack,13935,unquantified,,"""avoids repeated plugin allocation""",,
-https://github.com/web-infra-dev/rspack/pull/13955,web-infra-dev/rspack,13955,unquantified,,"""reducing ... heap allocation""",,
-https://github.com/web-infra-dev/rspack/pull/14019,web-infra-dev/rspack,14019,quantified,1.147,"""CodeSplitter::prepare: 206,953,778 Ir -> 180,452,234 Ir""",instruction count (D4),
-https://github.com/web-infra-dev/rspack/pull/14097,web-infra-dev/rspack,14097,unquantified,,"""reduce hash digest allocations""",,
-https://github.com/web-infra-dev/rspack/pull/14242,web-infra-dev/rspack,14242,unquantified,,"""avoid repeated string allocation""",,
-https://github.com/wolfSSL/wolfssh/pull/779,wolfSSL/wolfssh,779,none,,status output rate-limited to once per second,not a perf claim,
-https://github.com/xtermjs/xterm.js/pull/5948,xtermjs/xterm.js,5948,unquantified,,"lookup ""now read once"" instead of twice per codepoint",implicit; no perf words,
+https://github.com/Azure/azure-mcp/pull/958,Azure/azure-mcp,958,unquantified,,"""significantly faster execution"" (parallel deploy)",,yes
+https://github.com/Azure/azure-sdk-tools/pull/13031,Azure/azure-sdk-tools,13031,unquantified,,"""Reduced API calls""",,y
+https://github.com/AzureAD/microsoft-identity-web/pull/3409,AzureAD/microsoft-identity-web,3409,unquantified,,"""significantly faster than string interpolation""",,y
+https://github.com/CapSoftware/Cap/pull/1424,CapSoftware/Cap,1424,unquantified,,"""drastically reduce video export times""",,y
+https://github.com/FastLED/FastLED/pull/1998,FastLED/FastLED,1998,unquantified,,"""optimize compilation speed""",,y
+https://github.com/Giorgi/DuckDB.NET/pull/300,Giorgi/DuckDB.NET,300,quantified,5,"""~80% reduction in allocations for VarInt operations"",",,yes
+https://github.com/JuliaLang/julia/pull/60339,JuliaLang/julia,60339,unquantified,,"""faster instruction selection""",,y
+https://github.com/JuliaLang/julia/pull/61826,JuliaLang/julia,61826,quantified,,""">100x slowdown reported in #61820""",baseline-only: number describes the bug fixed; results only in images,?
+https://github.com/MetaMask/metamask-extension/pull/39214,MetaMask/metamask-extension,39214,quantified,11.5,"""23 to 2"" useSelector subscriptions","also ""expected 10-20ms"" INP with no baseline",y
+https://github.com/NethermindEth/nethermind/pull/10590,NethermindEth/nethermind,10590,quantified,,variance range 20.8% -> 7.9% (2.6x) etc.,"stability claim, not speed; ""Throughput unchanged""",y
+https://github.com/PrefectHQ/prefect/pull/20096,PrefectHQ/prefect,20096,quantified,,"""~156KB"" bundle deferred","no baseline, no ratio",y
+https://github.com/PrefectHQ/prefect/pull/20454,PrefectHQ/prefect,20454,quantified,4,"""queries per active work pool from 8 to 2""",also 24 -> 6,y
+https://github.com/PrefectHQ/prefect/pull/22060,PrefectHQ/prefect,22060,unquantified,,"""reduces repeated API reads""",,y
+https://github.com/QL-Win/QuickLook/pull/1902,QL-Win/QuickLook,1902,quantified,,"""freezing the entire UI for 7-8 seconds""","baseline number only, no after value",y
+https://github.com/SimonHalvdansson/Harmonic-HN/pull/263,SimonHalvdansson/Harmonic-HN,263,unquantified,,"""Gradle optimizations for faster sync""","Anshu: ""reduce repeated work during sync"" counts as evidence?",y
+https://github.com/TracecatHQ/tracecat/pull/1764,TracecatHQ/tracecat,1764,unquantified,,"""better throughput""","10s timeout is config, not a claim",y
+https://github.com/Z3Prover/z3/pull/8877,Z3Prover/z3,8877,quantified,2,"""halving the number of expensive big-integer operations""","op-count claim (D4), not measured",y
+https://github.com/Z3Prover/z3/pull/9215,Z3Prover/z3,9215,unquantified,,"redundant mk_literal call is ""pure waste""",Anshu: Removed a redundant call so it improved by 2x,n
+https://github.com/antiwork/gumroad/pull/792,antiwork/gumroad,792,unquantified,,"""Eliminates N+1 queries""",,y
+https://github.com/astral-sh/ruff/pull/24623,astral-sh/ruff,24623,quantified,1.043,"""public delta: 4.32%""",direction of delta not stated; shadow delta 1.66% [Anshu: How is this even calculated??],n
+https://github.com/browser-use/browser-use/pull/3774,browser-use/browser-use,3774,unquantified,,"""faster execution""",,y
+https://github.com/celestiaorg/celestia-app/pull/7075,celestiaorg/celestia-app,7075,quantified,1.72,"""681us -> 396us""","first of several; 4.08->2.73ms (1.49), 11.61->2.74ms (4.24), allocs 2051->19; single-run sample",y
+https://github.com/chrxh/alien/pull/321,chrxh/alien,321,unquantified,,O(1) ring buffer index,perf words only in title and quoted prompt,y
+https://github.com/conchoecia/odp/pull/107,conchoecia/odp,107,unquantified,,"""reduce file size""",,y
+https://github.com/demergent-labs/azle/pull/3058,demergent-labs/azle,3058,quantified,20,"""from ~20 minutes to less than 1 minute""","CI time (D7); ""<1 min"" so ratio is a lower bound",y
+https://github.com/dotnet/msbuild/pull/12260,dotnet/msbuild,12260,unquantified,,"""improve performance ... reduced contention""",,y
+https://github.com/dotnet/roslyn/pull/80734,dotnet/roslyn,80734,unquantified,,"""more efficient implementation""",,y
+https://github.com/dotnet/roslyn/pull/82948,dotnet/roslyn,82948,unquantified,,"""Remove unnecessary NameValueCollection allocation""",,y
+https://github.com/dotnet/roslyn/pull/83470,dotnet/roslyn,83470,unquantified,,"""reach ... state much more quickly""",,y
+https://github.com/dotnet/runtime/pull/120630,dotnet/runtime,120630,unquantified,,"""faster ones to NativeMemory""","perf claim only in quoted issue; ""16 allocations replaced"" is a code count",y
+https://github.com/dotnet/runtime/pull/120633,dotnet/runtime,120633,unquantified,,"""better performance"", ""reduce allocations""",issue has benchmark code but no results,y
+https://github.com/dotnet/runtime/pull/120886,dotnet/runtime,120886,unquantified,,earlier fail-fast optimization,,y
+https://github.com/dotnet/runtime/pull/120916,dotnet/runtime,120916,unquantified,,early fail-fast optimization,,y
+https://github.com/dotnet/runtime/pull/124647,dotnet/runtime,124647,unquantified,,vectorize hot-path loops,,y
+https://github.com/dotnet/runtime/pull/126201,dotnet/runtime,126201,unquantified,,"""eliminates those intermediate allocations""","""one free instead of N+1"" not numeric",y
+https://github.com/dotnet/runtime/pull/126841,dotnet/runtime,126841,unquantified,,"""recently optimized [Intrinsic] vector helpers""",,y
+https://github.com/dotnet/runtime/pull/127779,dotnet/runtime,127779,unquantified,,"""O(n^2) copying"" -> doubling",big-O is not a numeric gain | evidence not found: body writes O(n²) (superscript) not O(n^2),n
+https://github.com/dotnet/runtime/pull/128228,dotnet/runtime,128228,quantified,1.3,"apphost 76,240 -> 58,640 bytes (-23%)","also dotnet -32% (1.48), libnethost -23%",y
+https://github.com/duneanalytics/spellbook/pull/9382,duneanalytics/spellbook,9382,unquantified,,"""significantly improving query performance""",,y
+https://github.com/duneanalytics/spellbook/pull/9384,duneanalytics/spellbook,9384,unquantified,,"""significantly reduces the data scanned""",,y
+https://github.com/duneanalytics/spellbook/pull/9390,duneanalytics/spellbook,9390,unquantified,,"""improve query performance""",,y
+https://github.com/duneanalytics/spellbook/pull/9391,duneanalytics/spellbook,9391,unquantified,,"""significantly improve query performance""",,y
+https://github.com/gindemit/unity-rlottie/pull/60,gindemit/unity-rlottie,60,unquantified,,"""drain completed renders faster""",,y
+https://github.com/gluesql/glues/pull/146,gluesql/glues,146,unquantified,,"""optimize keymap rendering""",,y
+https://github.com/hathach/tinyusb/pull/3542,hathach/tinyusb,3542,unquantified,,removes runtime division from hot path,,y
+https://github.com/hmislk/hmis/pull/13695,hmislk/hmis,13695,unquantified,,"""Improve lab data loading and update efficiency""",,y
+https://github.com/jscarle/LightResults/pull/63,jscarle/LightResults,63,unquantified,,"""reduce reflection in Error.ToString""",,y
+https://github.com/kentcdodds/kentcdodds.com/pull/683,kentcdodds/kentcdodds.com,683,unquantified,,"""to improve performance"" (cache)","12h TTL and 3d SWR are config, not claims",y
+https://github.com/langfuse/langfuse-docs/pull/2143,langfuse/langfuse-docs,2143,none,,caching headers 5 min -> 1 hour,cache TTL change; no perf-gain claim stated,y
+https://github.com/langfuse/langfuse-docs/pull/2144,langfuse/langfuse-docs,2144,unquantified,,"""improves initial page load performance""",,y
+https://github.com/ltwlf/json-diff-ts/pull/300,ltwlf/json-diff-ts,300,unquantified,,"""Smaller bundle size"", ""Better performance""",,y
+https://github.com/maplibre/martin/pull/2664,maplibre/martin,2664,none,,"benchmark run by request count, not duration","benchmark reproducibility, not a perf change",y
+https://github.com/marin-community/marin/pull/3398,marin-community/marin,3398,quantified,1.035,"""32.67/32.63 ms to 31.57/31.63 ms""",,y
+https://github.com/marin-community/marin/pull/5023,marin-community/marin,5023,unquantified,,"move rendering ""out of the document scan hot path""",,y
+https://github.com/microsoft/ApplicationInsights-JS/pull/2616,microsoft/ApplicationInsights-JS,2616,unquantified,,"""enabling better tree-shaking""",,y
+https://github.com/microsoft/magentic-ui/pull/54,microsoft/magentic-ui,54,unquantified,,"""reduce build times""",,y
+https://github.com/microsoft/onnxruntime/pull/28588,microsoft/onnxruntime,28588,quantified,,"""~761ms"" vs ""~6ms"" optimized impl (129x gap)","baseline-only: gap is to another implementation, no after number for this PR",y
+https://github.com/microsoft/onnxruntime/pull/28589,microsoft/onnxruntime,28589,quantified,4.84,"""4.8-7.6x speedup with 8 threads""","1 vs 8 threads, not base vs head; also ""2-bit now 10-30% faster than 4-bit"" and ""~20x regression fully resolved"" | evidence not found: body has 4.8–7.6× (en dash and × sign); r_c 4.84 compares 1 vs 8 threads of the new kernel so it is not a before/after of this PR",n
+https://github.com/microsoft/python-environment-tools/pull/299,microsoft/python-environment-tools,299,unquantified,,"""O(1) cloning ... instead of O(n) deep copies""",,y
+https://github.com/microsoft/testfx/pull/5654,microsoft/testfx,5654,unquantified,,"""significantly improve performance""",,y
+https://github.com/microsoft/vscode-pull-request-github/pull/8597,microsoft/vscode-pull-request-github,8597,unquantified,,"""Branches should appear instantly""",,y
+https://github.com/mlflow/mlflow/pull/17730,mlflow/mlflow,17730,quantified,1.1,"""Bulk operations complete ~10% faster""",,y
+https://github.com/mlflow/mlflow/pull/18983,mlflow/mlflow,18983,unquantified,,"""more performant (avoids loading entire file into memory)""",,y
+https://github.com/mlflow/mlflow/pull/19194,mlflow/mlflow,19194,unquantified,,"""Improves test performance""","""~117 lines"" is code size",y
+https://github.com/mlflow/mlflow/pull/19368,mlflow/mlflow,19368,unquantified,,"""for faster execution""",,y
+https://github.com/mlflow/mlflow/pull/22670,mlflow/mlflow,22670,quantified,1.34,"""Single-process lint: 25.6 s -> 19.1 s (-25 %)""","agent text says ""~25% speedup"", which a naive +p reading gives 1.25; measured times give 1.34 | evidence not found: body has 25.6 s → 19.1 s (−25 %) with arrow and minus sign; first stated claim is '~25% single-process speedup'; r_c 1.34 is correct",n
+https://github.com/modelcontextprotocol/csharp-sdk/pull/1274,modelcontextprotocol/csharp-sdk,1274,unquantified,,"""eliminates those intermediate allocations""",,y
+https://github.com/moonbitlang/core/pull/2780,moonbitlang/core,2780,unquantified,,"""to improve performance""","""18 operations removed"" is a code count",y
+https://github.com/oxc-project/oxc/pull/12776,oxc-project/oxc,12776,unquantified,,"""Eliminates unnecessary heap allocations""",,y
+https://github.com/paradigmxyz/reth/pull/22350,paradigmxyz/reth,22350,unquantified,,release lock during expensive work,,y
+https://github.com/paradigmxyz/reth/pull/22399,paradigmxyz/reth,22399,quantified,,"""Eliminates ~2.56ms of fixed overhead per near-empty block""",saving with no total baseline,y
+https://github.com/primer/react/pull/7411,primer/react,7411,quantified,,"""INP > 200ms"" -> ""< 200ms""","speculative, threshold only, no ratio",y
+https://github.com/remotion-dev/remotion/pull/7126,remotion-dev/remotion,7126,unquantified,,urgent updates can preempt waveform drawing,,y
+https://github.com/rustfs/rustfs/pull/449,rustfs/rustfs,449,quantified,5,"""5-10x for small files, 2-3x for large files, 3-5x overall""","first claim, lower bound; unmeasured",y
+https://github.com/ryokun6/ryos/pull/360,ryokun6/ryos,360,none,,move transcripts to IndexedDB to avoid quota,"reliability, not perf",y
+https://github.com/ryokun6/ryos/pull/772,ryokun6/ryos,772,quantified,11,"initial load ""~33 seconds"" -> ""~3s DOMContentLoaded""",,y
+https://github.com/ryokun6/ryos/pull/794,ryokun6/ryos,794,quantified,116.5,"""reducing processing duration from 233ms to 2ms""",,y
+https://github.com/ryokun6/ryos/pull/1304,ryokun6/ryos,1304,quantified,1.132,"""iPod app chunk reduced from ~231.72 kB to ~204.71 kB""","in testing log, not summary",y
+https://github.com/sikanhe/gqtx/pull/79,sikanhe/gqtx,79,unquantified,,"""O(n) -> O(1) complexity improvement""",evidence not found: body has O(n) → O(1) with an arrow not ->,n
+https://github.com/softmaple/softmaple/pull/680,softmaple/softmaple,680,quantified,3.73,"""updateItem x 20 000: 29.1 ms -> 7.8 ms (~3.7x)""",also positionOf 7.0 -> 3.9 ms (1.8x) | evidence not found: figures are separate table cells and body uses 'updateItem × 20 000' and '~3.7×'; r_c 3.73 is correct,n
+https://github.com/softmaple/softmaple/pull/683,softmaple/softmaple,683,quantified,1.24,"""76.8 ms -> 61.7 ms (1.24x)""","also 1.31x, 1.14x | evidence not found: figures are separate table cells (76.8 ms | 61.7 ms | 1.24×); r_c 1.24 is correct",n
+https://github.com/softmaple/softmaple/pull/693,softmaple/softmaple,693,quantified,,"""O(N) string work instead of O(N^2)""; pre-fix ""~1.25 GiB""",baseline-only,y
+https://github.com/sourcebot-dev/sourcebot/pull/357,sourcebot-dev/sourcebot,357,quantified,2,"""50% reduction in database queries""",other % figures are future opportunities,y
+https://github.com/swc-project/swc/pull/11895,swc-project/swc,11895,quantified,,"""Net regression: +1.4 us (+5.58%)""",baseline-only: number describes the regression being fixed | evidence not found: body has +1.4 µs (µ not u),n
+https://github.com/thorek1/MacroModelling.jl/pull/112,thorek1/MacroModelling.jl,112,none,,cached block decomposition,no perf claim stated,y
+https://github.com/umasteeringgroup/UMA/pull/498,umasteeringgroup/UMA,498,quantified,1.2,"""Mobile: 20-40% faster mesh combining""","""expected"", unmeasured; first claim, lower bound",y
+https://github.com/vitejs/vite/pull/22151,vitejs/vite,22151,unquantified,,"""skipping both DNS lookups and all async overhead""",,y
+https://github.com/web-infra-dev/rspack/pull/13133,web-infra-dev/rspack,13133,unquantified,,"hash work ""happens in parallel""",,y
+https://github.com/web-infra-dev/rspack/pull/13306,web-infra-dev/rspack,13306,unquantified,,"""ids list stays lightweight"", ""without cloning""",,y
+https://github.com/web-infra-dev/rspack/pull/13535,web-infra-dev/rspack,13535,unquantified,,"bucket instead of ""scanning the full map""",,y
+https://github.com/web-infra-dev/rspack/pull/13536,web-infra-dev/rspack,13536,unquantified,,narrow module-group scanning,,y
+https://github.com/web-infra-dev/rspack/pull/13631,web-infra-dev/rspack,13631,unquantified,,"""narrow performance experiment""",no gain stated | status should be none: body calls it a narrow performance experiment and states no gain; only the perf() title prefix,n
+https://github.com/web-infra-dev/rspack/pull/13674,web-infra-dev/rspack,13674,unquantified,,"""should reduce serial overhead""",,y
+https://github.com/web-infra-dev/rspack/pull/13935,web-infra-dev/rspack,13935,unquantified,,"""avoids repeated plugin allocation""",,y
+https://github.com/web-infra-dev/rspack/pull/13955,web-infra-dev/rspack,13955,unquantified,,"""reducing ... heap allocation""",,y
+https://github.com/web-infra-dev/rspack/pull/14019,web-infra-dev/rspack,14019,quantified,1.147,"""CodeSplitter::prepare: 206,953,778 Ir -> 180,452,234 Ir""",instruction count (D4) | evidence not found: body inserts '/ 21.02%' after the first Ir figure so the quoted string is not contiguous; r_c 1.147 is correct,n
+https://github.com/web-infra-dev/rspack/pull/14097,web-infra-dev/rspack,14097,unquantified,,"""reduce hash digest allocations""",,y
+https://github.com/web-infra-dev/rspack/pull/14242,web-infra-dev/rspack,14242,unquantified,,"""avoid repeated string allocation""",,y
+https://github.com/wolfSSL/wolfssh/pull/779,wolfSSL/wolfssh,779,none,,status output rate-limited to once per second,not a perf claim,y
+https://github.com/xtermjs/xterm.js/pull/5948,xtermjs/xterm.js,5948,unquantified,,"lookup ""now read once"" instead of twice per codepoint",implicit; no perf words,y
